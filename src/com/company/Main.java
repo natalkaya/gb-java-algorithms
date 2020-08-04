@@ -24,6 +24,10 @@ public class Main {
 
         Task3 task3 = new Task3();
         task3.subtask_1();
+        task3.subtask_2();
+        task3.subtask_3();
+        task3.subtask_4();
+        task3.subtask_5();
     }
 }
 

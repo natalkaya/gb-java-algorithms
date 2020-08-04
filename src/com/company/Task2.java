@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.function.IntSupplier;
 
-public class Task2 implements IntSupplier {
+public class Task2 extends BaseClass implements IntSupplier {
     /**
      * Задание 2.1
      * На основе программного кода из домашнего задания №1 реализуйте
@@ -52,14 +52,12 @@ public class Task2 implements IntSupplier {
      */
 
     private final Random random = new Random();
-    private long startTime = System.nanoTime();
-    private long endTime = System.nanoTime();
+    private Map<String, Long> timeExecution = new HashMap<>();
 
     public Map<String, Long> getTimeExecution() {
         return timeExecution;
     }
 
-    private Map<String, Long> timeExecution = new HashMap<>();
     private final int[] array400 = getArrayOfRandomIntegers(400);
 
     private void swap(int[] arr, int first, int last) {
@@ -82,12 +80,6 @@ public class Task2 implements IntSupplier {
 //                .limit(length).boxed()
 //                .mapToInt(Integer::intValue)
 //                .toArray();
-    }
-
-    private void printTimeExecution(String algorithmName, long startTime, long endTime) {
-        long execTime = endTime - startTime;
-        timeExecution.put(algorithmName, execTime);
-        System.out.println(String.format("Time execution: %d", execTime));
     }
 
     private Integer linearSearch(int[] arr, int left, int right, int key) {
