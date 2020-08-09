@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.linkedList.LinkedList;
-import com.company.linkedList.SingleLinkedList;
+import com.company.collections.MyLinkedList;
+import com.company.collections.SingleLinkedList;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
@@ -86,23 +86,24 @@ public class Task3 extends BaseClass {
         arrayObjSingleLinkedList.print();
     }
 
-    public void subtask_4() {
+    public MyLinkedList<ArrayObj> subtask_4() {
         System.out.println("Задание 3.4\n" +
                 " * На основе списка из задания 3.1 реализуйте простой двусторонний\n" +
                 " * список и его базовые методы.\n" +
                 " * Реализуйте список заполненный объектами из вашего класса из задания");
-        LinkedList<ArrayObj> javaUtilLinkedList = new LinkedList<>();
-        javaUtilLinkedList.add(new ArrayObj(1));
-        javaUtilLinkedList.add(new ArrayObj(2));
-        javaUtilLinkedList.add(new ArrayObj(3));
-        System.out.println("java.util.LinkedList: " + javaUtilLinkedList.toString());
-        javaUtilLinkedList.addFirst(new ArrayObj(1));
-        System.out.println("java.util.LinkedList after addFirst(...):" + javaUtilLinkedList.toString());
-        System.out.println("java.util.LinkedList -> peekLast(): " + javaUtilLinkedList.peekLast());
-        System.out.println("java.util.LinkedList after peekLast():" + javaUtilLinkedList.toString());
-        System.out.println("java.util.LinkedList -> contains(): " + javaUtilLinkedList.contains(new ArrayObj(3)));
-        System.out.println("java.util.LinkedList -> pollLast(): " + javaUtilLinkedList.pollLast());
-        System.out.println("java.util.LinkedList after pollLast():" + javaUtilLinkedList.toString());
+        MyLinkedList<ArrayObj> javaUtilMyLinkedList = new MyLinkedList<>();
+        javaUtilMyLinkedList.add(new ArrayObj(1));
+        javaUtilMyLinkedList.add(new ArrayObj(2));
+        javaUtilMyLinkedList.add(new ArrayObj(3));
+        System.out.println("java.util.LinkedList: " + javaUtilMyLinkedList.toString());
+        javaUtilMyLinkedList.addFirst(new ArrayObj(1));
+        System.out.println("java.util.LinkedList after addFirst(...):" + javaUtilMyLinkedList.toString());
+        System.out.println("java.util.LinkedList -> peekLast(): " + javaUtilMyLinkedList.peekLast());
+        System.out.println("java.util.LinkedList after peekLast():" + javaUtilMyLinkedList.toString());
+        System.out.println("java.util.LinkedList -> contains(): " + javaUtilMyLinkedList.contains(new ArrayObj(3)));
+        System.out.println("java.util.LinkedList -> pollLast(): " + javaUtilMyLinkedList.pollLast());
+        System.out.println("java.util.LinkedList after pollLast():" + javaUtilMyLinkedList.toString());
+        return javaUtilMyLinkedList;
     }
 
     public void subtask_5() {
@@ -111,13 +112,13 @@ public class Task3 extends BaseClass {
                 " * выполните базовые операции итератора.\n" +
                 " * Оцените время выполнения операций с помощью базового метода\n" +
                 " * System.nanoTime()");
-        LinkedList<ArrayObj> javaUtilLinkedList = new LinkedList<>();
-        javaUtilLinkedList.add(new ArrayObj(1));
-        javaUtilLinkedList.add(new ArrayObj(2));
-        javaUtilLinkedList.add(new ArrayObj(3));
-        javaUtilLinkedList.print();
-        System.out.println("Size: " + javaUtilLinkedList.size());
-        ListIterator<ArrayObj> itr = javaUtilLinkedList.listIterator();
+        MyLinkedList<ArrayObj> javaUtilMyLinkedList = new MyLinkedList<>();
+        javaUtilMyLinkedList.add(new ArrayObj(1));
+        javaUtilMyLinkedList.add(new ArrayObj(2));
+        javaUtilMyLinkedList.add(new ArrayObj(3));
+        javaUtilMyLinkedList.print();
+        System.out.println("Size: " + javaUtilMyLinkedList.size());
+        ListIterator<ArrayObj> itr = javaUtilMyLinkedList.listIterator();
         while (itr.hasNext()) {
             System.out.println("Iterator:nextIndex() value: " + itr.nextIndex());
         }

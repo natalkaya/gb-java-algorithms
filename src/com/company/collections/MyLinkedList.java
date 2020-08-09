@@ -1,4 +1,4 @@
-package com.company.linkedList;
+package com.company.collections;
 
 
 import com.company.BaseClass;
@@ -6,12 +6,12 @@ import com.company.BaseClass;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
-public class LinkedList<T> extends BaseClass {
+public class MyLinkedList<T> extends BaseClass {
     private Node<T> first;
     private Node<T> last;
     private int size = 0;
 
-    public LinkedList() {
+    public MyLinkedList() {
         first = null;
     }
 

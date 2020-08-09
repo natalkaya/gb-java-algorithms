@@ -1,4 +1,4 @@
-package com.company.linkedList;
+package com.company.collections;
 
 public class SingleLinkedList<T> {
     private Link<T> first;
