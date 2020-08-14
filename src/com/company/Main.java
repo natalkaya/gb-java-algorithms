@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.recurison.Task5;
+
 import java.util.Map;
 
 public class Main {
@@ -9,6 +11,7 @@ public class Main {
         Task2 task2 = new Task2();
         Task3 task3 = new Task3();
         Task4 task4 = new Task4();
+        Task5 task5 = new Task5();
 
         task1.run();
 
@@ -36,6 +39,9 @@ public class Main {
         task4.subtasj_3();
         task4.subtask_4();
         task4.subtask_5();
+
+        task5.subtask_5();
+        task5.subtask_6();
 
     }
 }
