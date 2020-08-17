@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class BaseClass {
     private final Map<String, Long> timeExecution = new HashMap<>();
@@ -23,5 +20,13 @@ public class BaseClass {
             list.add(new ArrayObj(random.nextInt(size)));
         }
         return list;
+    }
+
+    public int[] initArray(int arrSize) {
+        int[] arr = new int[arrSize];
+        for (int i = 0; i < arrSize; i++) {
+            arr[i] = random.nextInt(arrSize);
+        }
+        return arr;
     }
 }
