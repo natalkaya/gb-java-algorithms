@@ -24,7 +24,7 @@ public class HeapSort {
         int l = left(index);
         int r = right(index);
         int largest = index;
-        if (l < heapSize && a[largest] < a[l]) {
+        if (l < heapSize && a[index] < a[l]) {
             largest = l;
         }
         if (r < heapSize && a[largest] < a[r]) {
