@@ -58,6 +58,10 @@ public class Task2 extends BaseClass implements IntSupplier {
         return timeExecution;
     }
 
+    public int[] getArray400() {
+        return array400;
+    }
+
     private final int[] array400 = getArrayOfRandomIntegers(400);
 
     private void swap(int[] arr, int first, int last) {
@@ -75,11 +79,6 @@ public class Task2 extends BaseClass implements IntSupplier {
         endTime = System.nanoTime();
         printTimeExecution("getArrayOfRandomIntegers", startTime, endTime);
         return arr;
-//        return IntStream
-//                .generate(this)
-//                .limit(length).boxed()
-//                .mapToInt(Integer::intValue)
-//                .toArray();
     }
 
     private Integer linearSearch(int[] arr, int left, int right, int key) {
